@@ -11,10 +11,20 @@
   "author": "servo",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jwt-simple": "^0.5.6",
     "mongoose": "^5.9.20"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/servo98/api-king-back.git"
+  },
+  "bugs": {
+    "url": "https://github.com/servo98/api-king-back/issues"
+  },
+  "homepage": "https://github.com/servo98/api-king-back#readme"
 }

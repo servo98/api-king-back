@@ -13,3 +13,8 @@ export const database = {
     user : process.env.DB_USER || 'admin',
     name : process.env.DB_NAME || 'APIKingData'
 };
+
+export const auth = {
+    secret: process.env.AUTH_SECRET || 'secret',
+    salt: process.env.AUTH_SALT_ROUNDS || 10
+};

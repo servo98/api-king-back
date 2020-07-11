@@ -1,8 +1,5 @@
 import express from 'express';
 import * as userController from '../controllers/UserController.js';
-// import * as AlbumController from '../controllers/album.js';
-//import middlewares
-// import pagination from '../middlewares/pagination.jxº
 
 const router = express.Router();
 
