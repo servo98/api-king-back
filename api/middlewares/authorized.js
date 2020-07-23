@@ -12,6 +12,7 @@ export default async (req, res, next) => {
         if(!user){
             return res.status(403).json({error: 'Unauthorized'});
         }
+        req.body.userId = payload.userId
         next();
     } catch (error) {
         return res.status(403).json({error: 'Bad token'});

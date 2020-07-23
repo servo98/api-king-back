@@ -15,5 +15,9 @@ export default mongoose.model('User', new mongoose.Schema({
         type: String,
         required: true,
         minlength: [8, 'El campo debe ser mayor a 8 dígitos'],
-    }
+    },
+    projects: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Project'
+    }]
 }));

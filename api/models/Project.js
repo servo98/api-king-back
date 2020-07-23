@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 
-export default mongoose.model('Proyect', new mongoose.Schema({
+export default mongoose.model('Project', new mongoose.Schema({
     name: {
         type: String,
         required: [true, 'Nombre obligatorio']
@@ -27,9 +27,5 @@ export default mongoose.model('Proyect', new mongoose.Schema({
     models: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Model'
-    }],
-    controllers: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Controller'
     }]
 }));

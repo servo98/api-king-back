@@ -1,7 +1,7 @@
 import userRoutes from './UserRoutes.js';
 import authRoutes from './AuthRoutes.js';
 import testRoutes from './TestRoutes.js';
-import proyectRoutes from './ProyectRoutes.js';
+import projectRoutes from './ProjectRoutes.js';
 
 import authorized from '../middlewares/authorized.js';
 
@@ -22,8 +22,8 @@ export default [
         middlewares: [authorized]
     },
     {
-        path: '/proyects',
-        resolver: proyectRoutes,
+        path: '/projects',
+        resolver: projectRoutes,
         middlewares: [authorized],
         
     }
