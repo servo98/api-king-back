@@ -3,6 +3,7 @@ import authRoutes from './AuthRoutes.js';
 import testRoutes from './TestRoutes.js';
 import projectRoutes from './ProjectRoutes.js';
 import modelRoutes from './ModelRoutes.js';
+import apiRoutes from './ApiRoutes.js';
 
 import authorized from '../middlewares/authorized.js';
 
@@ -31,5 +32,10 @@ export default [
         path: '/models',
         resolver: modelRoutes,
         middlewares: [authorized],
-    }
+    },
+    {
+        path: '/api/:slug',
+        resolver: apiRoutes,
+        middlewares: [],
+    },
 ];
