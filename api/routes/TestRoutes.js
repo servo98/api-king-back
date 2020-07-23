@@ -6,7 +6,7 @@ router.route('/')
     .get((req, res) => {
         return res.json({
             msg: 'hola',
-            res
+            body: req.body
         });
     });
 
