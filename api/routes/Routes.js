@@ -21,7 +21,7 @@ export default [
     {
         path: '/test',
         resolver: testRoutes,
-        middlewares: [authorized]
+        middlewares: []
     },
     {
         path: '/projects',
