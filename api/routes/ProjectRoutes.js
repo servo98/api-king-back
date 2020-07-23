@@ -8,6 +8,7 @@ router.route('/')
     .post(projectController.create);
 
 router.route('/:id')
+    .get(projectController.show)
     .put(projectController.update)
     .delete(projectController.destroy);
 

@@ -4,28 +4,37 @@ import mongoose from 'mongoose';
 export default mongoose.model('Project', new mongoose.Schema({
     name: {
         type: String,
-        required: [true, 'Nombre obligatorio']
+        required: [true, 'name required']
     },
-    database: {
-        user: {
-            type: String,
-            required: true
-        },
-        pass: {
-            type: String,
-            required: true
-        },
-        host: {
-            type: String,
-            required: true
-        },
-        name: {
-            type: String,
-            required: true
-        }
+    slug: {
+        type: String,
+        required: [true, 'slug required'],
+        unique: true
+    },
+    description: {
+        type: String
+    },
+    dbUser: {
+        type: String,
+        required: true
+    },
+    dbPass: {
+        type: String,
+        required: true
+    },
+    dbHost: {
+        type: String,
+        required: true
+    },
+    dbName: {
+        type: String,
+        required: true
     },
     models: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Model'
+    }],
+    routes: [{
+        type: String
     }]
 }));

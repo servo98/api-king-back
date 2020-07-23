@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 
 const types = {
-    String,
-    Number,
-    Date,
-    Boolean,
-    ObjectId
+    'string': String,
+    'number': Number,
+    'date': Date,
+    'boolean': Boolean,
+    'objectId': mongoose.Schema.Types.ObjectId
 }
 
 export default mongoose.model('Model', new mongoose.Schema({
@@ -20,11 +20,16 @@ export default mongoose.model('Model', new mongoose.Schema({
         },
         type: {
             type: String,
-            required: [true, 'Tipo de campo obligatorio'],
-            unique: true,
+            enum: Object.keys(types),
+            required: [true, 'Tipo de campo obligatorio']
         },
-        unique: {
+        required: {
             type: Boolean,
+            default: false
+        },
+        distinct: {
+            type: Boolean,
+            default: false
         }
     }]
 }));
